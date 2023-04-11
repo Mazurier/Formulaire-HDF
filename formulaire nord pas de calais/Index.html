@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Hauts-De-France</title>
+    <link rel="icon" href="img/hdflogo.png">
+</head>
+<body>
+    <h1>
+        Bienvenue sur le site des Hauts De France!
+    </h1>
+    <img src="img/hdf.png" alt="logo hdf">
+    <h2>
+        Formulaire d'inscription:
+    </h2>
+    Toute les questions sont obligatoire
+    
+    <form action="finito.html"> <!--Envoie données a page finito.html-->
+
+        <br>
+        <label for="nomfamille">Nom</label>
+        <input type="text" name="nom" minlength="2" maxlength="150" placeholder="Votre nom" id="nomfamille">
+                
+        <br>
+        <br>
+        <label for="nomperso">Prénom</label> 
+        <input type="text" name="prenom" minlength="2" maxlength="150" placeholder="Votre Prénom" id="nomperso"> 
+        
+        <br>
+        <br>
+        <label for="DDN">Date de naissance</label>
+        <input type="date" name="date_de_naissance" min="1900-01-01" max="2023-04-11" id="DDN"> <!--besoin javascrypt pour actualisation date-->
+
+        <br>
+        <br>
+        <label for="age">Age</label>
+        <input type="number" name="age" min="0" max="150" id="age" required>
+        
+        <br>
+        <br>
+        <div>
+            Sexe
+            <br>
+            <label for="homme">Homme</label>
+            <input type="radio" name="sexe" id="homme" required>
+            <br> <!--Besoin que d'un required pour type radio par name-->
+            <label for="femme">Femme</label>
+            <input type="radio" name="sexe" id="femme">
+        </div>
+
+        <br>
+        <label for="adressmail">Adresse Email</label>
+        <input type="email" name="email" placeholder="ex: jeandupont@hotmail.fr" id="adressmail" required>
+
+        <br>
+        <br>
+        <label for="adresspost">Adresse postale</label>
+        <input type="text" name="adresspost" id="adresspost" required>
+
+        <br>
+        <br>
+        <label for="codepost">Code postale</label>
+        <input type="number" name="codepost" min="0" max="99999" id="codepost" required> <!-- >900 pour outre mer-->
+
+        <br>
+        <br>
+        <label for="ville">Ville</label>
+        <input type="text" name="ville" id="ville" required> <!--Ajout de selection avec JS a faire-->
+
+        <br>
+        <br>
+        <div>
+            Métier exercé:
+            <br>
+            <label for="ouvrier">Ouvrier</label>
+            <input type="radio" name="metier" id="ouvrier" required>
+            <br>
+            <label for="fermier">Fermier</label>
+            <input type="radio" name="metier" id="fermier">
+            <br>
+            <label for="prof">Professeur</label>
+            <input type="radio" name="metier" id="prof">
+            <br>
+            <label for="policier">Policier</label>
+            <input type="radio" name="metier" id="policier">
+            <br>
+            <label for="autre">Autre</label>
+            <input type="radio" name="metier" id="autre">
+            <br>
+            <label for="metierautre">Si autre</label>
+            <input type="text" name="metierautre" id="metierautre">
+        </div>
+        <br>
+        <br>
+        <div>
+            Nationalité: <!--utilisation checkbox mauvaise, impossible de forcer 1 choix parmis, go radio malgré non bi-natio-->
+            <br>
+            <label for="fr">Française</label>
+            <input type="radio" name="natio" id="fr" checked required>
+            <br>
+            <label for="es">Espagnole</label>
+            <input type="radio" name="natio" id="es">
+            <br>
+            <label for="de">Allemande</label>
+            <input type="radio" name="natio" id="de">
+            <br>
+            <label for="ch">Suisse</label>
+            <input type="radio" name="natio" id="ch">
+            <br>
+            <label for="it">Italienne</label>
+            <input type="radio" name="natio" id="it">
+            <br>
+            <label for="us">Américaine</label>
+            <input type="radio" name="natio" id="us">
+            <br>
+            <label for="natioautre">Autre</label>
+            <input type="radio" name="natio" id="natioautre">
+            <br>
+            <label for="natioautrereponse">Si autre</label>
+            <input type="text" name="natioautre" id="natioautrereponse">
+            <br>
+        </div>
+        <br>
+        <br>
+        <div>
+            Pays de naissance:
+            <br>
+            <label for="PNfr">France</label>
+            <input type="radio" name="PaysNaissance" id="PNfr" checked required>
+            <br>
+            <label for="PNes">Espagne</label>
+            <input type="radio" name="PaysNaissance" id="PNes">
+            <br>
+            <label for="PNde">Allemagne</label>
+            <input type="radio" name="PaysNaissance" id="PNde">
+            <br>
+            <label for="PNch">Suisse</label>
+            <input type="radio" name="PaysNaissance" id="PNch">
+            <br>
+            <label for="PNit">Italie</label>
+            <input type="radio" name="PaysNaissance" id="PNit">
+            <br>
+            <label for="PNus">Etat Unis d'Amerique</label>
+            <input type="radio" name="PaysNaissance" id="PNus">
+            <br>
+            <label for="PNautre">Autre</label>
+            <input type="radio" name="PaysNaissance" id="PNautre">
+            <br>
+            <label for="PNautre">Si autre</label>
+            <input type="text" name="PaysNaissanceautre" id="PNautre">
+            <br>
+        </div>
+        <br> <!--premier chiffre 1 pour les hommes, 2 pour les femmes, 3, 4, 7 ou 8 pour les personnes en cours d'immatriculation en France-->
+        <label for="numsecu">Numéro de Sécurité social</label>
+        <input type="number" name="numsecu" id="numsecu" min="100000000000000" max="899999999999999" required> <!--15 chiffre, voir https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s%C3%A9curit%C3%A9_sociale_en_France-->
+        <br>
+        <br>
+        <label for="numpass">Numéro du passeport</label>
+        <input type="text" name="passport" id="numpass" required>
+        <br>
+        <br>
+        <label for="datedelivpassport">Date de délivrance du passeport</label>
+        <input type="date" name="datedelivpassport" id="datedelivpassport" min="1950-01-01" max="2023-04-11" required>
+        <br>
+        <br>
+        <label for="dateexpipassport">Date de validité du passeport</label>
+        <input type="date" name="dateexpipassport" id="dateexpipassport" min="2023-04-11" max="2050-01-01" required>
+
+        <br>
+        <br>
+        <button type="submit">
+            Soumettre
+        </button>
+    </form>
+    
+</body>
+</html>
